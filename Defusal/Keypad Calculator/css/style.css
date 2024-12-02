@@ -1,0 +1,153 @@
+/* Centraliza a calculadora na página */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black; /* Cor de fundo no caso de falha na imagem */
+    overflow: hidden;
+}
+
+.nav-link img {
+    display: inline-block; /* Garante que a imagem seja tratada como um elemento inline */
+    vertical-align: middle; /* Alinha a imagem verticalmente com o texto ou outros itens */
+    transition: transform 0.2s ease; /* Adiciona uma leve animação ao passar o mouse */
+}
+
+.nav-link img:hover {
+    transform: scale(1.1); /* Aumenta ligeiramente a imagem ao passar o mouse */
+}
+
+/* Navbar com fundo branco e links centralizados */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Fica acima de outros conteúdos */
+    background-color: white; /* Fundo branco */
+    padding: 10px 0; /* Adicionando padding para dar um espaço na navbar */
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center; /* Centraliza os itens da navbar */
+    align-items: center;
+    width: 100%; /* Garantir que a navbar ocupe toda a largura */
+}
+
+.navbar-nav .nav-item {
+    margin: 0 15px; /* Espaço entre os links */
+}
+
+.navbar-nav .nav-link {
+    color: #333; /* Cor do texto */
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #28a745; /* Cor ao passar o mouse sobre os links */
+}
+
+/* Ajuste para o conteúdo da página não ficar atrás da navbar */
+body {
+    padding-top: 70px; /* Espaço suficiente para a navbar */
+}
+/* Container para o fundo com blur */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/keypad.png') no-repeat center center fixed; /* Caminho correto para a imagem */
+    background-size: contain; /* Ajusta para que a imagem se ajuste corretamente */
+    filter: blur(10px); /* Aplica o desfoque mais intenso */
+    z-index: -1; /* Coloca o fundo atrás da calculadora */
+}
+
+/* Centraliza e estiliza a calculadora */
+.calculator {
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+    border-radius: 10px;
+    padding: 30px; /* Ajustei o padding para dar mais espaçamento */
+    text-align: center;
+    width: 340px; /* Ajustado para garantir que o conteúdo se ajuste melhor */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilização do título */
+.calculator h1 {
+    color: white;
+    font-size: 28px; /* Tamanho maior para o título */
+    margin-bottom: 20px;
+}
+
+/* Estilização dos labels e inputs */
+.calculator label {
+    color: white;
+    font-size: 18px;
+    display: block;
+    margin-bottom: 8px; /* Maior espaçamento entre label e campo */
+}
+
+.calculator input[type="number"],
+.calculator input[type="text"],
+.calculator input[type="submit"] {
+    width: 100%;
+    padding: 12px; /* Mais espaço nos inputs */
+    font-size: 16px;
+    margin-bottom: 20px; /* Maior espaçamento entre os campos */
+    border: none;
+    border-radius: 8px; /* Bordas mais arredondadas */
+}
+
+/* Estilo para o campo de texto */
+.calculator input[type="number"],
+.calculator input[type="text"] {
+    background-color: #444;
+    color: white;
+    text-align: center;
+}
+
+/* Estilo para o botão de submit */
+.calculator input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.calculator input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* Estilização do resultado */
+.calculator p {
+    color: white;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Botão de limpar */
+button {
+    background-color: #dc3545;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #c82333;
+}

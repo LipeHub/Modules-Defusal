@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+		<title>Keypad Calculator</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="TG">
+		<link rel="stylesheet" href="css/style.css"> <!-- Caminho para o CSS -->
+		<!-- Adicione o link para o Bootstrap CSS e o Font Awesome se necessário -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Ltrj+vsB5R8WwwFfexk3Rg0FxcHmnkdTka4b0wRRaF5ZrrzEzXt4DFi6BxITy85x" crossorigin="anonymous">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+	</head>
+		<body data-bs-theme="light">
+			    <!-- Navbar fixa no topo -->
+			<nav class="navbar navbar-expand-md navbar-dark bg-white">
+				<div class="container-fluid">
+				   <div class="collapse navbar-collapse" id="menu">
+						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+							<!-- Links para os 4 projetos -->
+							<li class="nav-item">
+							<a class="nav-link" href="https://defusal.fandom.com/wiki/Defusal_Wiki">
+								<img src="../img/defusal.png" alt="defusal" style="width: float; height: 24px;">
+							</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="../Index.html"><i class="fa-solid fa-house"></i>Home</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="../Mathematics Calculator/Mathematics Calc.html"><i class="fas fa-calculator"></i> Mathematics Calculator</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="../Timing Calculator/Timing Calc.html"><i class="fas fa-clock"></i> Timing Calculator</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</body>
+
+<body>
+    <div class="background"></div> <!-- Fundo com a imagem de fundo -->
+    <div class="calculator">
+        <h1>Keypad Calculator</h1>
+        <form id="keypad-form">
+		
+        <!-- Campos para entrada -->
+        <label for="fbutton">Primeiro botão:</label>
+        <input type="text" id="fbutton" name="fbutton" maxlength="2" required placeholder="Ex: 12"><br><br>
+
+        <label for="sbutton">Segundo botão:</label>
+        <input type="text" id="sbutton" name="sbutton" maxlength="2" required placeholder="Ex: 42"><br><br>
+
+        <label for="tbutton">Terceiro botão:</label>
+        <input type="text" id="tbutton" name="tbutton" maxlength="2" required placeholder="Ex: 3"><br><br>
+
+        <label for="lbutton">Quarto botão:</label>
+        <input type="text" id="lbutton" name="lbutton" maxlength="2" required placeholder="Ex: 61"><br><br>
+
+        
+        <!-- Botão de submissão -->
+        <input type="submit" value="Calcular" id="submit">
+		
+		<!-- Resultado -->
+        <p><span id="order"></span></p>
+		
+		<button id="clear" type="button">Limpar</button>
+    </div>
+        <!-- Script -->
+        <script src="js/script.js"></script>
+    </div>
+</body>
+</html>
