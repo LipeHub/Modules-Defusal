@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-key="timing-calc-title">Timing Calculator</title>
+    <link rel="icon" type="image/png" href="../img/idefusal.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <script>
+        // This script runs instantly to prevent a theme flash.
+        (function() {
+        const theme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+    <script>
+        // This script runs instantly to set the language.
+        (function() {
+            const lang = localStorage.getItem('lang') || 'en';
+            document.documentElement.setAttribute('lang', lang);
+            document.querySelector('#lang-selector').value = lang;
+        })();
+    </script>
+</head>
+<body>
+    <div id="wiki-container">
+        <header>
+             <div id="header-controls">
+                <button id="theme-toggle-btn" class="control-btn" data-key="theme-toggle">Theme</button>
+                <div class="lang-selector"><select id="lang-selector"><option value="en">EN</option><option value="pt">PT-BR</option></select></div>
+            </div>
+            <h1 data-key="timing-calc-title">Timing Calculator</h1>
+        </header>
+        <nav id="wiki-nav">
+            <ul>
+                <li>
+                    <!-- Removed the inline style attribute -->
+                    <a href="https://defusal.fandom.com/wiki/Defusal_Wiki">
+                        <img src="../img/fandom.png" data-key="Defusal">
+                    </a>    
+                </li>
+                <li><a href="../index.html" data-key="home-nav">Home</a></li>
+                <li><a href="mathematics.html" data-key="math-nav">Mathematics</a></li>
+                <li><a href="timing.html" data-key="timing-nav">Timing</a></li>
+                <li><a href="keypad.html" data-key="keypad-nav">Keypad</a></li>
+                <li>
+                    <!-- Removed the inline style attribute -->
+                    <a href="https://www.roblox.com/games/3577061261/Defusal">
+                        <img src="../img/game.png" data-key="Roblox">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <main id="main-content">
+            <div class="calculator-container">
+                <p data-key="timing-calc-p1">Enter the numbers and letters exactly as they appear on the module. The letter values are A=1, B=2, C=3, D=4.</p>
+                <form id="timing-calculator-form" class="calculator-form">
+                    <div class="form-group">
+                        <label for="timing-nums" data-key="timing-calc-num-label">Number Pair (e.g., 2 6)</label>
+                        <input type="text" id="timing-nums" placeholder="e.g. 2 6" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="timing-letters" data-key="timing-calc-letter-label">Letter Pair (e.g., A B)</label>
+                        <input type="text" id="timing-letters" placeholder="e.g. A B" required>
+                    </div>
+                    <button type="submit" class="calculate-btn" data-key="calculate-btn">Calculate</button>
+                </form>
+                <div id="result-display"></div>
+            </div>
+        </main>
+        <footer><p data-key="footer-text"></p></footer>
+    </div>
+    <script src="../js/all.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+/-----------------------------------------\
+|-- Defusal
+|   |-- index.html
+|   |-- css/
+|       |-- style.css
+|    |-- img/
+|       |-- defusal.png
+|       |-- game.png
+        |-- fandom.png 
+|    |-- js/
+|        |-- all.js
+|    |-- modules/
+|        |-- mathematics-calculator.html
+|        |-- mathematics.html
+|        |-- timing-calculator.html
+|        |-- timing.html
+|        |-- keypad-calculator.html
+|        |-- keypad.html
+|    |-- file structure.txt
+\-----------------------------------------/

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-key="math-page-title">Mathematics Module - Defusal Assistant</title>
+    <link rel="icon" type="image/png" href="../img/idefusal.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <script>
+        // This script runs instantly to prevent a theme flash.
+        (function() {
+        const theme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+    <script>
+        // This script runs instantly to set the language.
+        (function() {
+            const lang = localStorage.getItem('lang') || 'en';
+            document.documentElement.setAttribute('lang', lang);
+            document.querySelector('#lang-selector').value = lang;
+        })();
+    </script>  
+</head>
+<body>
+    <div id="wiki-container">
+        <header>
+             <div id="header-controls">
+                <button id="theme-toggle-btn" class="control-btn" data-key="theme-toggle">Theme</button>
+                <div class="lang-selector">
+                    <select id="lang-selector">
+                        <option value="en">EN</option>
+                        <option value="pt">PT-BR</option>
+                    </select>
+                </div>
+            </div>
+            <h1 data-key="math-page-title">Mathematics Module</h1>
+        </header>
+        <nav id="wiki-nav">
+            <ul>
+                <li>
+                    <!-- Removed the inline style attribute -->
+                    <a href="https://defusal.fandom.com/wiki/Defusal_Wiki">
+                        <img src="../img/fandom.png" data-key="Defusal">
+                    </a>    
+                </li>
+                <li><a href="../index.html" data-key="home-nav">Home</a></li>
+                <li><a href="mathematics.html" data-key="math-nav">Mathematics</a></li>
+                <li><a href="timing.html" data-key="timing-nav">Timing</a></li>
+                <li><a href="keypad.html" data-key="keypad-nav">Keypad</a></li>
+                <li>
+                    <!-- Removed the inline style attribute -->
+                    <a href="https://www.roblox.com/games/3577061261/Defusal">
+                        <img src="../img/game.png" data-key="Roblox">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <main id="main-content">
+            <section class="content-section module-guide">
+                <h2 data-key="how-to-solve">How to Solve the Module</h2>
+                <p data-key="math-desc">The Mathematics module presents you...</p>
+                <p><strong data-key="steps-title">Step-by-step instructions:</strong></p>
+                <ol>
+                    <li data-key="math-step1"><strong>Translate the letters...</strong></li>
+                    <li data-key="math-step2"><strong>Multiply the numbers...</strong></li>
+                    <li data-key="math-step3"><strong>Enter the result...</strong></li>
+                </ol>
+                <a href="mathematics-calculator.html" class="tool-link-btn" data-key="open-calculator-btn">Open Calculator Tool</a>
+            </section>
+        </main>
+        <footer>
+            <p data-key="footer-text">Defusal Game Wiki & Assistant is a fan-made site...</p>
+        </footer>
+    </div>
+    <script src="../js/all.js"></script>
+</body>
+</html>

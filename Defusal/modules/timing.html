@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-key="timing-page-title">Timing Module Guide</title>
+    <link rel="icon" type="image/png" href="../img/idefusal.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <script>
+        // This script runs instantly to prevent a theme flash.
+        (function() {
+        const theme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+    <script>
+        // This script runs instantly to set the language.
+        (function() {
+            const lang = localStorage.getItem('lang') || 'en';
+            document.documentElement.setAttribute('lang', lang);
+            document.querySelector('#lang-selector').value = lang;
+        })();
+    </script>
+</head>
+<body>
+    <div id="wiki-container">
+        <header>
+             <div id="header-controls">
+                <button id="theme-toggle-btn" class="control-btn" data-key="theme-toggle">Theme</button>
+                <div class="lang-selector">
+                    <select id="lang-selector">
+                        <option value="en">EN</option>
+                        <option value="pt">PT-BR</option>
+                    </select>
+                </div>
+            </div>
+            <h1 data-key="timing-page-title">Timing Module Guide</h1>
+        </header>
+        <nav id="wiki-nav">
+           <ul>
+                <li>
+                    <!-- Removed the inline style attribute -->
+                    <a href="https://defusal.fandom.com/wiki/Defusal_Wiki">
+                        <img src="../img/fandom.png" data-key="Defusal">
+                    </a>    
+                </li>
+                <li><a href="../index.html" data-key="home-nav">Home</a></li>
+                <li><a href="mathematics.html" data-key="math-nav">Mathematics</a></li>
+                <li><a href="timing.html" data-key="timing-nav">Timing</a></li>
+                <li><a href="keypad.html" data-key="keypad-nav">Keypad</a></li>
+                <li>
+                    <!-- Removed the inline style attribute -->
+                    <a href="https://www.roblox.com/games/3577061261/Defusal">
+                        <img src="../img/game.png" data-key="Roblox">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <main id="main-content">
+            <section class="content-section module-guide">
+                <h2 data-key="how-to-solve">How to Solve the Module</h2>
+                <!-- NEW, CLEARER TEXT BELOW -->
+                <p data-key="timing-desc">The Timing module has a flashing button and displays a pair of numbers and a pair of letters. Your goal is to perform a calculation to find a specific color, and then press the button at the exact moment it flashes that target color.</p>
+                <p><strong data-key="steps-title">Step-by-step instructions:</strong></p>
+                <ol>
+                    <li data-key="timing-step1"><strong>Find the target color:</strong> You must use the numbers and letters on the module to calculate a final value. This value corresponds to one of the colors in the flashing sequence (Red, Orange, Yellow, Green, Blue, or Purple).</li>
+                    <li data-key="timing-step2"><strong>Use the calculator:</strong> To avoid doing the math under pressure, open our calculator tool. Input the numbers and letters from the module, and it will instantly tell you the correct target color.</li>
+                    <li data-key="timing-step3"><strong>Wait and press:</strong> Watch the flashing button. When it lights up with the target color revealed by the calculator, press it immediately to defuse the module.</li>
+                </ol>
+                <a href="timing-calculator.html" class="tool-link-btn" data-key="open-calculator-btn">Open Calculator Tool</a>
+            </section>
+        </main>
+        <footer>
+            <p data-key="footer-text"></p>
+        </footer>
+    </div>
+    <script src="../js/all.js"></script>
+</body>
+</html>
