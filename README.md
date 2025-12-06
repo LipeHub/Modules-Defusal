@@ -1,1 +1,1 @@
-open Index.html for easy navigation
+open index.html for easy navigation
