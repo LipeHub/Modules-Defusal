@@ -1,0 +1,321 @@
+#wiki-nav ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  height: 50px; /* Adjust this value to your liking */
+}
+
+#wiki-nav ul li:last-child {
+  margin-left: auto;
+}
+
+/* 
+ *  --- THIS IS THE FIX ---
+ *  Target all images within the navigation links
+*/
+#wiki-nav ul li a img {
+  height: 30px; /* Set a specific height for the icons */
+  width: auto;    /* Allow the width to adjust automatically */
+  vertical-align: middle; /* Helps with alignment in some browsers */
+}
+/* Optional: Clean up inline styles from your HTML */
+
+/* 1. Color Palette & Variables */
+:root {
+    --bg-color: #f9f9f9;
+    --body-text-color: #333;
+    --container-bg-color: #fff;
+    --container-border-color: #a7d7f9;
+    --header-bg-color: #eaf5ff;
+    --header-text-color: #0056a0;
+    --nav-bg-color: #f8f9fa;
+    --nav-link-color: #0056a0;
+    --nav-active-bg-color: #fff;
+    --card-bg-color: #f9f9f9;
+    --card-border-color: #ddd;
+    --footer-text-color: #777;
+    --code-bg-color: #eee;
+}
+
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --body-text-color: #e0e0e0;
+    --container-bg-color: #1e1e1e;
+    --container-border-color: #0056a0;
+    --header-bg-color: #1a1a1a;
+    --header-text-color: #a7d7f9;
+    --nav-bg-color: #2c2c2c;
+    --nav-link-color: #a7d7f9;
+    --nav-active-bg-color: #1e1e1e;
+    --card-bg-color: #2c2c2c;
+    --card-border-color: #444;
+    --footer-text-color: #aaa;
+    --code-bg-color: #333;
+}
+
+/* 2. General Body and Container Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--body-text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#wiki-container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: var(--container-bg-color);
+    border: 1px solid var(--container-border-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* 3. Header & Controls */
+header {
+    background-color: var(--header-bg-color);
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--container-border-color);
+    text-align: center;
+    position: relative;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+header h1 {
+    margin: 0;
+    color: var(--header-text-color);
+    font-size: 2.2em;
+    transition: color 0.3s;
+}
+
+#header-controls {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.control-btn, .lang-selector select {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--container-border-color);
+    color: var(--body-text-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.control-btn:hover, .lang-selector select:hover {
+    background-color: var(--header-bg-color);
+}
+
+/* 4. Navigation */
+#wiki-nav {
+    background-color: var(--nav-bg-color);
+    border-bottom: 1px solid var(--container-border-color);
+    padding: 0 10px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+#wiki-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+#wiki-nav ul li {
+    border-right: 1px solid var(--container-border-color);
+}
+
+#wiki-nav ul li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--nav-link-color);
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#wiki-nav ul li a:hover,
+#wiki-nav ul li a.active {
+    background-color: var(--nav-active-bg-color);
+}
+
+/* 5. Main Content */
+#main-content {
+    padding: 20px;
+}
+
+.content-section {
+    margin-bottom: 30px;
+}
+
+.content-section h2 {
+    border-bottom: 2px solid var(--container-border-color);
+    padding-bottom: 10px;
+    color: var(--header-text-color);
+    transition: color 0.3s, border-color 0.3s;
+}
+
+/* 6. Module Grid & Cards */
+.module-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.module-card {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--card-border-color);
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    transition: box-shadow 0.3s, transform 0.3s, background-color 0.3s, border-color 0.3s;
+}
+
+.module-card:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transform: translateY(-5px);
+}
+
+.module-card a {
+    text-decoration: none;
+    color: var(--body-text-color);
+    font-weight: bold;
+}
+
+.module-card h3 {
+     color: var(--header-text-color);
+}
+
+/* 7. Module Page Specifics */
+.module-guide ol {
+    padding-left: 20px;
+}
+
+.module-guide li {
+    margin-bottom: 10px;
+}
+
+.module-guide code {
+    background-color: var(--code-bg-color);
+    color: var(--body-text-color);
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* 8. Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    color: var(--footer-text-color);
+    border-top: 1px solid var(--container-border-color);
+    background-color: var(--header-bg-color);
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+/* 9. Calculator Form Styles */
+.calculator-container {
+    padding: 20px;
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--card-border-color);
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.calculator-form {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 600px) {
+    .calculator-form {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--header-text-color);
+}
+
+.form-group input {
+    padding: 10px;
+    border: 1px solid var(--card-border-color);
+    border-radius: 5px;
+    background-color: var(--bg-color);
+    color: var(--body-text-color);
+    font-size: 1em;
+}
+
+.calculate-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--header-text-color);
+    color: var(--container-bg-color);
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    grid-column: 1 / -1; /* Span full width */
+    transition: opacity 0.3s;
+}
+
+.calculate-btn:hover {
+    opacity: 0.85;
+}
+
+#result-display {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: var(--bg-color);
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#result-display .result-prefix {
+    font-weight: bold;
+    color: var(--header-text-color);
+}
+
+#result-display .result-value {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: var(--body-text-color);
+    word-wrap: break-word;
+}
+
+/* Link to Calculator Button */
+.tool-link-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 20px;
+    background-color: var(--header-text-color);
+    color: var(--container-bg-color) !important;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    transition: opacity 0.3s;
+}
+
+.tool-link-btn:hover {
+    opacity: 0.85;
+}
